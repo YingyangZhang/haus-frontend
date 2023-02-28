@@ -26,7 +26,7 @@ function App() {
 
     useEffect(() => {
         if (token !== null) {
-        fetch("https://haus-app.onrender.com/me", {
+        fetch("https://haus-backend-hde3.onrender.com/me", {
             method: "GET",
             headers: {
             Authorization: `Bearer ${token}`,
@@ -42,7 +42,7 @@ function App() {
     },[])
 
     useEffect(() => {
-        fetch('https://haus-app.onrender.com/furnitures')
+        fetch('https://haus-backend-hde3.onrender.com/furnitures')
         .then(r => r.json())
         .then(data => {
             console.log(data);

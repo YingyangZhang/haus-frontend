@@ -12,7 +12,7 @@ function SingleProduct({setCurrentUser, currentUser, cartItems, setCartItems, se
         const target = cartItems.find(item => item.furniture.name === state.furniture.name);
         if (target) {
             if (target.quantities <= 9) {
-                fetch(`https://haus-app.onrender.com/cart_items/${target.id}`, {
+                fetch(`https://haus-backend-hde3.onrender.com/cart_items/${target.id}`, {
                     method: 'PATCH',
                     headers: {
                         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ function SingleProduct({setCurrentUser, currentUser, cartItems, setCartItems, se
                 })
             }
         } else {
-            fetch('https://haus-app.onrender.com/cart_items/', {
+            fetch('https://haus-backend-hde3.onrender.com/cart_items/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

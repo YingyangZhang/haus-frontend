@@ -16,7 +16,7 @@ function Bag({isBag, setIsBag, cartItems, setCartItems}) {
     }
 
     function handleDelete(id) {
-        fetch(`https://haus-app.onrender.com/cart_items/${id}`, {
+        fetch(`https://haus-backend-hde3.onrender.com/cart_items/${id}`, {
             method: 'DELETE',
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -29,7 +29,7 @@ function Bag({isBag, setIsBag, cartItems, setCartItems}) {
 
     function handlePlus(id, quantities) {
         if (quantities <= 9) {
-            fetch(`https://haus-app.onrender.com/cart_items/${id}`, {
+            fetch(`https://haus-backend-hde3.onrender.com/cart_items/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ function Bag({isBag, setIsBag, cartItems, setCartItems}) {
 
     function handleMinus(id, quantities) {
         if( quantities > 1) {
-            fetch(`https://haus-app.onrender.com/cart_items/${id}`, {
+            fetch(`https://haus-backend-hde3.onrender.com/cart_items/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

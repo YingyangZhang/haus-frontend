@@ -20,9 +20,9 @@ function App() {
     const [furnitures, setFurnitures] = useState([])
     const [isSearch, setIsSearch] = useState(false);
     const [isBag, setIsBag] = useState(false);
-    const [selectedCat, setSelectedCat] = useState("All")
-    const [isCancel, setIsCancel] = useState(false)
-    const token = localStorage.getItem("jwt")
+    const [selectedCat, setSelectedCat] = useState("All");
+    const [isCancel, setIsCancel] = useState(false);
+    const token = localStorage.getItem("jwt");
 
     useEffect(() => {
         if (token !== null) {

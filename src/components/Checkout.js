@@ -15,7 +15,7 @@ function Checkout({cartItems, setCartItems, currentUser, setCurrentUser}) {
     const total = subTotal + shipping + tax;
 
     function handleClick() {
-        fetch('https://haus-backend-hde3.onrender.com/orders', {
+        fetch('https://haus-db.onrender.com/orders', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ function Checkout({cartItems, setCartItems, currentUser, setCurrentUser}) {
             setCurrentUser(data.user)
             console.log(currentUser)
             
-            return fetch(`https://haus-backend-hde3.onrender.com/users/clear_bag/${currentUser.id}`, {
+            return fetch(`https://haus-db.onrender.com/users/clear_bag/${currentUser.id}`, {
                 method: 'DELETE',
                 headers: {
                     Authorization: `Bearer ${token}`

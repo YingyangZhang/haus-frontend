@@ -15,7 +15,7 @@ function AllProducts({furnitures, selectedCat, setSelectedCat, setFurnitures, is
     const navigate = useNavigate();
 
     function handleClick() {
-        fetch('https://haus-backend-hde3.onrender.com/furnitures')
+        fetch('https://haus-db.onrender.com/furnitures')
         .then(r => r.json())
         .then(data => {
             const strAscending = [...data].sort((a, b) =>

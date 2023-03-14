@@ -27,7 +27,7 @@ export default function Login({setCurrentUser, setIsLogin}) {
     function handleLogin(e) {
         e.preventDefault();
 
-        fetch('https://haus-backend-hde3.onrender.com/login', {
+        fetch('https://haus-db.onrender.com/login', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"

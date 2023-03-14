@@ -25,7 +25,7 @@ export default function Signup({setIsSignup, setCurrentUser, setIsLogin}) {
     function handleSignup(e) {
         e.preventDefault();
         
-        fetch('https://haus-backend-hde3.onrender.com/users',{
+        fetch('https://haus-db.onrender.com/users',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
